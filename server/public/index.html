@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskBoard QA Demo</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header><div><p class="eyebrow">PLAYWRIGHT PORTFOLIO APPLICATION</p><h1>TaskBoard</h1></div><span class="pill">Demo environment</span></header>
+    <section id="login-panel" class="panel">
+      <h2>Sign in</h2><p class="muted">Use the demo account shown below.</p>
+      <form id="login-form">
+        <label>Email<input id="email" type="email" autocomplete="username" value="qa@example.com" required></label>
+        <label>Password<input id="password" type="password" autocomplete="current-password" value="Password123!" required></label>
+        <button type="submit">Sign in</button><p id="login-error" class="error" role="alert"></p>
+      </form><p class="hint">Demo: qa@example.com / Password123!</p>
+    </section>
+    <section id="app-panel" class="panel" hidden>
+      <div class="toolbar"><div><h2>My tasks</h2><p id="welcome" class="muted"></p></div><button id="logout" class="secondary">Sign out</button></div>
+      <form id="task-form" class="task-form"><label class="sr-only" for="task-title">New task</label><input id="task-title" maxlength="80" placeholder="Add a task..." required><button type="submit">Add task</button></form>
+      <p id="task-error" class="error" role="alert"></p><ul id="task-list" aria-label="Task list"></ul>
+    </section>
+    <footer>Local demo application for automated testing practice. Do not use real credentials.</footer>
+  </main>
+  <script src="/app.js"></script>
+</body></html>

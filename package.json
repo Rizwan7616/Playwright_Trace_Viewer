@@ -1,0 +1,23 @@
+{
+  "name": "playwright-typescript-qa-suite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "End to end UI, API and hybrid automation framework using Playwright and TypeScript, with CI and trace debugging",
+  "scripts": {
+    "start:app": "node server/server.js",
+    "test": "playwright test",
+    "test:ui": "playwright test --project=chromium tests/ui",
+    "test:api": "playwright test --project=chromium tests/api",
+    "test:hybrid": "playwright test --project=chromium tests/hybrid",
+    "test:headed": "playwright test --headed --project=chromium",
+    "test:debug": "playwright test --debug --project=chromium",
+    "typecheck": "tsc --noEmit",
+    "report": "playwright show-report",
+    "trace": "playwright show-trace"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^22.15.30",
+    "typescript": "^5.9.2"
+  }
+}
